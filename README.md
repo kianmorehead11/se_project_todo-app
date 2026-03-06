@@ -32,4 +32,4 @@ DOM manipulation – Cloning templates, adding event listeners, and updating the
 
 This project is deployed on GitHub Pages:
 
-[- ADD LINK HERE](https://github.com/kianmorehead11/se_project_todo-app)
+[- ADD LINK HERE](https://kianmorehead11.github.io/se_project_todo-app)

@@ -9,8 +9,6 @@ import TodoCounter from "../components/TodoCounter.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
 const addTodoForm = addTodoPopupEl.querySelector(".popup__form");
-const addTodoCloseBtn = addTodoPopupEl.querySelector(".popup__close");
-const todosList = document.querySelector(".todos__list");
 
 const todoCounter = new TodoCounter(initialTodos, ".counter__text");
 
@@ -19,6 +17,8 @@ function handleCheck(completed) {
 }
 
 function handleDelete(completed) {
+  todoCounter.updateTotal(false);
+
   if (completed) {
     todoCounter.updateCompleted(false);
   }
@@ -60,6 +60,7 @@ const addTodoPopup = new PopupWithForm({
 
     const todoElement = generateTodo(values);
     section.addItem(todoElement);
+    todoCounter.updateTotal(true);
 
     addTodoForm.reset();
     newTodoValidator.resetValidation();
